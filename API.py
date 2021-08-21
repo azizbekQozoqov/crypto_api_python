@@ -7,7 +7,7 @@ class Cryptos:
     def __init__(self, API_KEY,  LIMIT, CONVERT):
         self.LIMIT = str(LIMIT)
         self.CONVERT = CONVERT
-        self._API_KEY = API_KEY
+        self.API_KEY = API_KEY
 
         if not self.API_KEY:
             raise Exception("API KEY is not defined")
@@ -17,7 +17,7 @@ class Cryptos:
         parameters = { 'start':'1', 'limit': self.LIMIT, 'convert': self.CONVERT } 
         headers = { 
 			'Accepts': 'application/json', 
-			'X-CMC_PRO_API_KEY': self._API_KEY
+			'X-CMC_PRO_API_KEY': self.API_KEY
 		} 
 
         session = Session()
