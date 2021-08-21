@@ -73,5 +73,3 @@ class Cryptos:
                 }
                 w.append(res)
             return w
-
-print(Cryptos.__doc__)
